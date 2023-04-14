@@ -75,3 +75,16 @@ supermanLi.remove();
 14a. Create an array called avengers with the following string values "Forever", "Fight", "As", "One", "AVENGERS", "ASSEMBLE!"
 14b. Using a loop, add each item from the avengers array as span elements/tags to the bottom of the document/webpage
 */
+
+const divs = document.getElementsByTagName('div');
+
+for (d = 0; d < divs.length; d++){
+    divs[d].classList.toggle("background");
+}
+
+const avengers = ["Forever", "Fight", "As", "One", "AVENGERS", "ASSEMBLE!"];
+
+for (i = 0; i < avengers.length; i++){
+    let spanText = "\n<span>" + avengers[i] + "</span>";
+    body.innerHTML += spanText;
+}
